@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Search Menu</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            div{
+                text-align:center;
+                top:50%;
+                background-color: #FF847C;
+            }
+            body{
+                background-color: #2A363B;
+            }
+            h3{
+                color: #2A363B;
+                font-family: "Lucida Console", "Courier New", monospace;
+            }
+            p{
+                color: #2A363B;
+                font-family: "Lucida Console", "Courier New", monospace;
+            }
+            .btn {
+                display: inline-block;
+                border-radius: 4px;
+                background-color: #99B898;
+                border: none;
+                color: #FFFFFF;
+                text-align: center;
+                font-size: 15px;
+                font-family: "Lucida Console", "Courier New", monospace;
+                padding: 5px;
+                width: 120px;
+                transition: all 0.5s;
+                cursor: pointer;
+                margin: 5px;
+             }
+            .btn span{
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
+                transition: 0.5s;
+            }
+            .btn span:after{
+                content: '\00bb';
+                position: absolute;
+                opacity: 0;
+                top: 0;
+                right: -20px;
+                transition: 0.5s;
+            }
+            .btn:hover span {
+                padding-right: 25px;
+            }   
+            
+            .btn:hover span:after {
+                opacity: 1;
+                right: 0;
+            }
+            
+            input{
+                background-color: #FECEAB;
+            }
+        </style>    
+    </head>
+    <body>
+        <div>
+            <br>
+            <h3>Enter 3 keywords to search</h3>
+            <form action="KafkaTwitter" method="POST">
+                <p>Keyword 1<input type="text" name="k1" value="Environment"/><br></p>
+                <p>Keyword 2<input type="text" name="k2" value="Charity"/><br></p>
+                <p>Keyword 3<input type="text" name="k3" value="Volunteer"/><br></p><br>
+                <input name="search" type="submit" value="Search" class="btn">
+            </form>
+            <a href="http://localhost:9870/explorer.html#/twitter_data"><button class="btn" style="vertical-align:middle"><span>HDFS Site</span></button></a>
+        </div>
+    </body>
+</html>
+ 
